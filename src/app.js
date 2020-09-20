@@ -1,23 +1,41 @@
-// Core modules
-const path = require("path");
-
-// NPM modules
-const hbs = require('hbs');
 const express = require("express");
+const cors = require("cors");
 
-// Local modules
-const geocode = require("./utils/geolocation");
-const forecast = require("./utils/forecast");
-
-// Directories
-const public_dir = path.join(__dirname, "../public")
-const templates_dir = path.join(__dirname, '../templates');
-const views_dir = path.join(__dirname, '../templates/views');
-const partials_dir = path.join(__dirname, '../templates/partials');
+const forcastRouter = require('./routers/forecast.router');
+const geolocationRouter = require('./routers/geolocation.router');
 
 const app = express();
 
+// Parse incoming json to access on event handlers.
+app.use(express.json());
+app.use(cors());
+app.use(forcastRouter);
+app.use(geolocationRouter);
+
 module.exports = app;
+
+
+
+// // Core modules
+// const path = require("path");
+
+// // NPM modules
+// const hbs = require('hbs');
+// const express = require("express");
+
+// // Local modules
+// const geocode = require("./utils/geolocation");
+// const forecast = require("./utils/forecast");
+
+// // Directories
+// const public_dir = path.join(__dirname, "../public")
+// const templates_dir = path.join(__dirname, '../templates');
+// const views_dir = path.join(__dirname, '../templates/views');
+// const partials_dir = path.join(__dirname, '../templates/partials');
+
+// const app = express();
+
+// module.exports = app;
 
 // // Hbs settings views & templates
 // app.set("view engine", "hbs");
