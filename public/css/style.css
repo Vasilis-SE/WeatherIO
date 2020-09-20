@@ -1,0 +1,67 @@
+body {
+    background: #ebebeb;
+}
+p {
+    color: #dadada;
+}
+header {
+    width: 100%;
+    background: #727272;
+    display: grid;
+    grid-template-rows: 35px 70px;
+}
+.main-header {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    text-align: center;
+    align-items: center;
+}
+.main-header > div > a {
+    text-decoration: none;
+    color: #e8e8e8;
+    font-size: 20px;
+}
+.top-header {
+    background: #525252;
+    display: grid;
+}
+
+footer {
+    width: 100%;
+    background: #727272;
+    color: #e8e8e1;
+    border-top: 5px solid #8a8071;
+    text-align: center;
+}
+
+.title-lg {
+    font-size: 60px;
+    font-weight: bold;
+    width: 100%;
+}
+.title-md {
+    font-size: 30px;
+    width: 100%;
+}
+.orange-m {
+    color: #f1a212;
+}
+.orange-d {
+    color: #dc9514;
+}
+
+
+#results-area {
+    display: none;
+    background: white;
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 4px;
+}
+
+.error-404-icon {
+	background-image: url(../grafix/page-not-found.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}

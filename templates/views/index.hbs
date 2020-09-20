@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> {{title}} </title>
+
+		<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="./css/style.css">
+	</head>
+	<body>
+		{{>header}}
+		<div class="container-fluid">
+			
+			<div class="row">
+				<div class="col-md-4">
+					
+				</div>
+				<div class="col-md-8">
+					<form id="forecast-form">
+					  	<div class="form-group">
+					  	  	<label for="locationAddr">Address</label>
+					  	  	<input type="text" class="form-control" id="locationAddr"  placeholder="Enter your location here...">
+					  	  	<small id="locationAddrError" class="form-text text-muted"></small>
+					  	</div>
+					  	<button type="submit" class="btn btn-primary"> Submit </button>
+					</form>
+
+					<div id="results-area">
+						<div class="row">
+							<div class="col-md-5 col-sm-6 col-xs-12">Location:</div>
+							<div class="col-md-7 col-sm-6 col-xs-12" id="location-res"></div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-5 col-sm-6 col-xs-12">Temperature:</div>
+							<div class="col-md-7 col-sm-6 col-xs-12" id="temperature-res"></div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-5 col-sm-6 col-xs-12">Rain(%)</div>
+							<div class="col-md-7 col-sm-6 col-xs-12" id="rainperc-res"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{{>footer}}
+	
+		<script type="text/javascript" src="./js/forecast.js"></script>
+	</body> 
+</html>
