@@ -18,7 +18,4 @@ router.get('/forecast/:lon/:lat', (req, res) => {
 	})();
 });
 
-
-
-
 module.exports = router;
