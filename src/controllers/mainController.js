@@ -1,6 +1,5 @@
 class ControllerMain {
-    constructor({ params, query, body, send, uriGenerator }) {
-		this.uriGenerator = uriGenerator;
+    constructor({ params, query, body, send }) {
 		this.params = params;
 		this.query = query;
 		this.body = body;
@@ -21,13 +20,15 @@ class ControllerMain {
 		this.send(201, data);
     }
   
-    success(data) {
-      	this.send(200, data);
-    }
+    success(data) { this.send(200, data); }
   
-    noContent() {
-      	this.send(204);
-    }
+    badRequest(data) { this.send(400, data); }
+  
+	forbidden(data) { this.send(403, data); }
+
+	notAcceptable(data) { this.send(406, data); }
+
+	serviceUnavailable(data) { this.send(503, data); }
 }
   
-module.exports = ControllerBase;
+module.exports = ControllerMain;
