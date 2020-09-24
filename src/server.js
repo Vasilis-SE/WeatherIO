@@ -1,6 +1,13 @@
-const app = require('./app');
-const port = process.env.PORT;
+const Express = require('./express');
+const Router = require('./routers/router');
+const forecastRoutes = require('./routers/forecastRoutes');
+const geolocationRoutes = require('./routers/geolocationRoutes');
 
-app.listen(port, () => {
-	console.log(`Server is up on port: ${port}`);
-});
+const express = new Express(
+	new Router([
+		new forecastRoutes(),
+		new geolocationRoutes(),
+	]),
+);
+
+expressApp.run();
