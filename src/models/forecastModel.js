@@ -20,5 +20,6 @@ class ForecastModel {
 
         return results;
     }
-
 }
+
+module.exports = ForecastModel;

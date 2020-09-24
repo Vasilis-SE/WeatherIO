@@ -21,5 +21,6 @@ class GeolocationModel {
 
         return results;
     }
-
 }
+
+module.exports = GeolocationModel;
