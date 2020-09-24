@@ -7,7 +7,7 @@ const express = new Express(
 	new Router([
 		new forecastRoutes(),
 		new geolocationRoutes(),
-	]),
+	])
 );
 
-expressApp.run();
+express.run();

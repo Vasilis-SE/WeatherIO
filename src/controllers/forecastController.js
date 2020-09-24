@@ -5,7 +5,9 @@ class ForecastController extends ControllerMain {
 
 	async getForecast() {
 		try {
-			// TODO: Call stuff...
+			const forecast = new forecastModel(this.params);
+			const response = await forecast.getForecast();
+			this.success( response );
 		} catch (err) {
 			this.error(err);
 		}
